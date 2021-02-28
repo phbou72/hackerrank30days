@@ -1,5 +1,19 @@
+const getLetters = (word, offset) => {
+    let letters = [];
+    for (let i = offset; i < word.length; i += 2) {
+        letters.push(word[i]);
+    }
+    return letters.join("");
+};
+
+const getOddLetters = (word) => getLetters(word, 1);
+const getEvenLetters = (word) => getLetters(word, 0);
+
 function processData(input) {
-    //Enter your code here
+    const [_count, ...words] = input.split("\n");
+    words.forEach((word) => {
+        console.log(`${getEvenLetters(word)} ${getOddLetters(word)}`);
+    });
 }
 
 process.stdin.resume();
