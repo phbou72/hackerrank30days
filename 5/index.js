@@ -25,4 +25,9 @@ function readLine() {
 
 function main() {
     const n = parseInt(readLine(), 10);
+
+    const MAX_MULTIPLE = 10;
+    for (let multiple = 1; multiple <= MAX_MULTIPLE; multiple++) {
+        console.log(`${n} x ${multiple} = ${n * multiple}`);
+    }
 }
